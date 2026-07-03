@@ -2,23 +2,23 @@
 
 class Solution {
     public boolean isSymmetric(TreeNode root) {
-        Queue<TreeNode> q=new LinkedList<>();
-        q.add(root.left);
-        q.add(root.right);
-        while(!q.isEmpty()){
-            TreeNode left=q.poll();
-            TreeNode right=q.poll();
-            if(left==null && right==null) continue;
-            
-            //conditions where it will become false
-            if(left==null || right==null) return false;
-            if(left.val!=right.val) return false;
+        if(root==null) return true;
+        Queue<TreeNode> left=new LinkedList<>();
+        Queue<TreeNode> right=new LinkedList<>();
+        left.add(root.left);
+        right.add(root.right);
+        while(!left.isEmpty() && !right.isEmpty()){
+            TreeNode l=left.poll();
+            TreeNode r=right.poll();
 
-            //adding elements
-            q.add(left.left);
-            q.add(right.right);
-            q.add(left.right);
-            q.add(right.left);
+            if(l==null && r==null) continue;
+            if(l==null || r==null) return false;
+            if(l.val!=r.val) return false;
+
+            left.add(l.left);
+            left.add(l.right);
+            right.add(r.right);
+            right.add(r.left);
         }
         return true;
     }
