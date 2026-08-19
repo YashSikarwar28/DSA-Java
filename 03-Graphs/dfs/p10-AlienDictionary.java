@@ -1,4 +1,4 @@
-//First we will traverse through thr string array and check the 2 adjacent strings the first character which is different we will add it in graph but in integer format char-'a'.
+//First we will traverse through the string array and check the 2 adjacent strings the first character which is different we will add it in graph but in integer format char-'a'.
 //One more important thing is we will create a 26 size array and add the char values which are only presnt in the string array.
 //Then we will run dfs loop topo sort one and check whether the particular char is unvisited or not add the values in stack, pop the values and add it in ans string.
 // 0 - unvisited, 1 - visited, 2 - safe
