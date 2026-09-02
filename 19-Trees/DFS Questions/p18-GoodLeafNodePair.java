@@ -1,5 +1,6 @@
 //We will traverse till leaf node and from there we will send the information to the node's parent about the distance, at how much distance the leaf node are located and how many are there. For this we will take left and right array and call dfs respectivey.
 //We will take leafdist array of size 11 in that we will update that how many nodes are there at left and right at a particular level.
+//BFS version is also available checkout in graph repo.
 class Solution {
     int res=0;
     public int[] dfs(TreeNode root,int distance){
