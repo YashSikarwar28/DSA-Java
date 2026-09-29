@@ -1,3 +1,6 @@
 -> Represent the array using indices
 -> Perform operation on those indices, can be one or two depending upon the question
 -> Return the max/min/count asked according to the question
+
+
+-> First write recursion -> then memoization -> then tabulation(iteration) -> then try to do space optimization
